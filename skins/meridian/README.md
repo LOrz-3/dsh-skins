@@ -1,7 +1,9 @@
 # DeepSeek-Meridian
 
-One skin, a whole wardrobe. A single install gives you the outfit and palette
-switcher in the lower left of the sidebar, and the choice is remembered locally.
+A DeepSeek male-character skin: switch between outfit styles, and switch to
+Claude or GPT palettes. One skin, a whole wardrobe — a single install gives you
+the outfit and palette switcher in the lower left of the sidebar, and the choice
+is remembered locally.
 
 ## The wardrobe panel
 
