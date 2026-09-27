@@ -59,6 +59,11 @@ export const REVIEWED_SKIN_HOOKS: Readonly<Record<string, ReviewedSkinHooksIdent
     manifestSha256: "6bcadb4f3da51a12838e002c8956baac2326bf67d7c1cf1f6108d93f1a7a6485",
     hooksSha256: "2e13e495adabe900df797cdbe930b8cb7fdb2ce721c1ba021e6eb2e74326e551",
   },
+  "meridian": {
+    entry: "hooks.mjs",
+    manifestSha256: "4c27336003a243cf78dd765315c082fc27554542f6c126cb753ab1dda37dee06",
+    hooksSha256: "d069337444a10875ca2ad22a3c7935eda5583618d22d519ea854708266ee8dea",
+  },
   "miku": {
     entry: "hooks.mjs",
     manifestSha256: "e02a59faf78b487e19f9f46d20a04ffc97ae483f67296f5a0bae315eba548a15",
