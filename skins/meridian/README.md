@@ -5,6 +5,29 @@ Claude or GPT palettes. One skin, a whole wardrobe — a single install gives yo
 the outfit and palette switcher in the lower left of the sidebar, and the choice
 is remembered locally.
 
+| ![DeepSeek-Meridian light](preview/light.jpg) | ![DeepSeek-Meridian dark](preview/dark.jpg) |
+|---|---|
+| light | dark |
+
+## Outfits (light)
+
+| knight | suit | midsummer | patissier | physician |
+|---|---|---|---|---|
+| ![knight](assets/background-knight-light.jpg) | ![suit](assets/background-suit-light.jpg) | ![midsummer](assets/background-swim-light.jpg) | ![patissier](assets/background-chef-light.jpg) | ![physician](assets/background-doctor-light.jpg) |
+
+## Outfits (dark)
+
+| knight | suit | midsummer | patissier | physician |
+|---|---|---|---|---|
+| ![knight](assets/background-knight-dark.jpg) | ![suit](assets/background-suit-dark.jpg) | ![midsummer](assets/background-swim-dark.jpg) | ![patissier](assets/background-chef-dark.jpg) | ![physician](assets/background-doctor-dark.jpg) |
+
+## Palettes (light)
+
+| stock | ClauMeridian | GPMeridian |
+|---|---|---|
+| ![stock](assets/background-knight-light.jpg) | ![ClauMeridian](assets/background-clau-light.jpg) | ![GPMeridian](assets/background-gp-light.jpg) |
+
+
 ## The wardrobe panel
 
 Rendered by `hooks.mjs`, styled declaratively in `patches.css` (which goes

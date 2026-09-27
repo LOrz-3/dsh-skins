@@ -2,6 +2,29 @@
 
 DeepSeek 男性形象皮肤：可切换不同风格服饰，可切换为 Claude 与 GPT 配色。一套皮肤，一整个衣柜——安装在侧栏左下角换装与换配色，选择记忆在本机。
 
+| ![子午线 · 亮色](preview/light.jpg) | ![子午线 · 暗色](preview/dark.jpg) |
+|---|---|
+| 亮色 | 暗色 |
+
+## 服装 · 亮色
+
+| 骑士 | 西装 | 盛夏 | 甜点师 | 主治 |
+|---|---|---|---|---|
+| ![骑士](assets/background-knight-light.jpg) | ![西装](assets/background-suit-light.jpg) | ![盛夏](assets/background-swim-light.jpg) | ![甜点师](assets/background-chef-light.jpg) | ![主治](assets/background-doctor-light.jpg) |
+
+## 服装 · 暗色
+
+| 骑士 | 西装 | 盛夏 | 甜点师 | 主治 |
+|---|---|---|---|---|
+| ![骑士](assets/background-knight-dark.jpg) | ![西装](assets/background-suit-dark.jpg) | ![盛夏](assets/background-swim-dark.jpg) | ![甜点师](assets/background-chef-dark.jpg) | ![主治](assets/background-doctor-dark.jpg) |
+
+## 配色（亮色）
+
+| 原色 | ClauMeridian | GPMeridian |
+|---|---|---|
+| ![原色](assets/background-knight-light.jpg) | ![ClauMeridian](assets/background-clau-light.jpg) | ![GPMeridian](assets/background-gp-light.jpg) |
+
+
 ## 换装面板
 
 由 `hooks.mjs` 渲染，样式写在 `patches.css`（声明式、经过安全管线、强制作用域）。
