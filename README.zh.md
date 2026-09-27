@@ -2,6 +2,18 @@
 
 [English](README.md) | 中文
 
+## 子午线 / DeepSeek-Meridian
+
+DeepSeek 男性形象皮肤，可切换不同风格服饰（骑士／西装／盛夏／甜点师／主治），可切换为 Claude 与 GPT 配色——安装一次即可。这个 fork 就是它的开发处。
+
+| 亮色 | 暗色 |
+|---|---|
+| [![子午线 亮色](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/preview/light.jpg)](https://github.com/zhu1090093659/dsh-skins/pull/18) | [![子午线 暗色](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/preview/dark.jpg)](https://github.com/zhu1090093659/dsh-skins/pull/18) |
+
+对应 PR：[zhu1090093659/dsh-skins#18](https://github.com/zhu1090093659/dsh-skins/pull/18)
+
+---
+
 `@linxin666/dsh-client-ui-skin-center`（cordis 插件 id `ui-skin-center`）是 dsh Web GUI 唯一的皮肤包：它把皮肤列表 / 试穿 / 应用做成一级设置分区「皮肤中心」（设置 → 皮肤中心，只列已安装皮肤），并且是所有皮肤的唯一加载器与渲染器。皮肤是纯资产目录——没有 package.json、不发 npm、不接 cordis 接线——只与皮肤中心契约（`contracts/`）耦合；皮肤中心把对官方 DSH 的全部耦合吸收在契约之后。卡片自带总开关（关闭即停用试穿、应用与背景控制）。
 
 - 列表：展示「官方默认」加目录册里已安装的皮肤（名称、标语、强调色），当前应用目标带「使用中」标记。目录册合并两个来源：随本包内置的默认皮肤（`skins/blue-fantasy/`）与放进 `$DSH_HOME/skins/<id>/` 的用户皮肤（同 id 时用户皮肤遮蔽内置皮肤）。皮肤集中的其余皮肤都是市场条目：在 DSH 市场商店一键按需安装到 `$DSH_HOME/skins/<id>/`，即由同一目录册作为用户皮肤管理——无需重启，重开卡片或刷新页面即收录。`skin.json` 校验失败的皮肤按 fail-closed 排除，并作为目录诊断上报。

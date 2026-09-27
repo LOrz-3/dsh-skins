@@ -2,6 +2,18 @@
 
 English | [中文](README.zh.md)
 
+## 子午线 / DeepSeek-Meridian
+
+A DeepSeek male-character skin with switchable outfit styles (knight / suit / midsummer / patissier / physician) and switchable Claude / GPT palettes — all in one install. This fork is where it is being developed.
+
+| Light | Dark |
+|---|---|
+| [![子午线 light](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/preview/light.jpg)](https://github.com/zhu1090093659/dsh-skins/pull/18) | [![子午线 dark](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/preview/dark.jpg)](https://github.com/zhu1090093659/dsh-skins/pull/18) |
+
+Open pull request: [zhu1090093659/dsh-skins#18](https://github.com/zhu1090093659/dsh-skins/pull/18)
+
+---
+
 `@linxin666/dsh-client-ui-skin-center` (cordis plugin id `ui-skin-center`) is the single skin package of the dsh Web GUI: it puts the skin list / try-on / apply into the real GUI as the first-level Skin Center settings section (settings → 皮肤中心, listing only installed skins), and it is the only loader and renderer for skins. A skin is a pure asset directory — no package.json, no npm publish, no cordis wiring — that couples only to the skin-center contract (`contracts/`); the skin center absorbs every official-DSH coupling behind that contract. The card carries its own enable switch (off disables try-on, apply and the background controls).
 
 - List: shows "官方默认" (official default) plus every installed skin in the catalog with its name, tagline and accent color; the currently active target carries the Active marker. The catalog merges two sources: the default skin shipped inside this package (`skins/blue-fantasy/`) and user skins dropped into `$DSH_HOME/skins/<id>/` (a user skin with the same id shadows the built-in one). Every other skin of the collection is a market item: install it on demand from the DSH Market store (one-click install) into `$DSH_HOME/skins/<id>/`, where this same catalog manages it as a user skin — no restart, reopen the card or reload to pick it up. Skins whose `skin.json` fails validation are excluded fail-closed and reported as catalog diagnostics.
