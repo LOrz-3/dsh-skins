@@ -1,0 +1,248 @@
+/**
+ * DeepSeek-Meridian (子午线) — decoration layer (patches.css).
+ *
+ * L2: ornament only, zero behaviour. Every selector here is anchored on a hook
+ * verified present in the installed host (0.1.7-rc.2) and its dsh-web family
+ * bundles — `data-pane`, `data-dsh-surface`, plus `body` — and never on a
+ * CSS-Modules hash, so an official rebuild cannot silently unhook the layer.
+ * That is deliberate: `[class*=...]` matching is used 1024 times across the
+ * accepted skins and is the most fragile surface in this ecosystem.
+ *
+ * Register: 细线 / 留白 / 对称 — restrained otome leading-man styling, not
+ * cute-princess. All motifs follow the character name (Meridian = 子午线):
+ * graticule, meridian ticks, compass crest, prism corners, orbital divider,
+ * geometric lace.
+ *
+ * Two placement rules keep this safe:
+ *  - Canvas layers ride on body's own pseudo-elements, so they never touch the
+ *    element whose background-image the skin centre uses for backgroundMedia.
+ *  - Pane ornaments are declared as extra background-image layers on the pane
+ *    itself. A background-image paints above that element's background-color
+ *    and needs no positioning, so the layer cannot disturb host layout; it also
+ *    means no `position` override, which would break a host element that is
+ *    already positioned.
+ *
+ * Deliberately absent: any height/min-height on [data-dsh-frame]. Five accepted
+ * skins document that adding one re-inflates skins which intentionally shorten
+ * the frame to make room for top/bottom HUD strips.
+ */
+
+/* ---- canvas: drifting rose petals over the latitude/longitude whisper ---- */
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    url(assets/meridian-petals.svg),
+    url(assets/meridian-graticule.svg);
+  background-position: left top, left top;
+  background-repeat: repeat, repeat;
+  background-size: 160px 160px, 96px 96px;
+}
+
+body[data-ds-dark-theme]::before {
+  background-image:
+    url(assets/meridian-petals.svg),
+    url(assets/meridian-graticule-dark.svg);
+}
+
+/* ---- frame: the four prism corners --------------------------------------- */
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background-image:
+    url(assets/meridian-corner-tl.svg),
+    url(assets/meridian-corner-tr.svg),
+    url(assets/meridian-corner-bl.svg),
+    url(assets/meridian-corner-br.svg);
+  background-position: left top, right top, left bottom, right bottom;
+  background-repeat: no-repeat;
+  background-size: 96px 96px;
+}
+
+body[data-ds-dark-theme]::after {
+  background-image:
+    url(assets/meridian-corner-tl-dark.svg),
+    url(assets/meridian-corner-tr-dark.svg),
+    url(assets/meridian-corner-bl-dark.svg),
+    url(assets/meridian-corner-br-dark.svg);
+}
+
+/* ---- sidebar: crest watermark above, lace rail below --------------------- */
+
+[data-pane='sidebar'] {
+  background-image:
+    url(assets/meridian-crest.svg),
+    url(assets/meridian-lace.svg);
+  background-position: 50% 14px, left bottom;
+  background-repeat: no-repeat, repeat-x;
+  background-size: 96px 96px, auto 22px;
+}
+
+[data-ds-dark-theme] [data-pane='sidebar'] {
+  background-image:
+    url(assets/meridian-crest-dark.svg),
+    url(assets/meridian-lace-dark.svg);
+}
+
+/* ---- conversation: meridian ticks on all four inner corners -------------- */
+/* Symmetry is the point: a single corner mark would read as a stray artefact,
+   four read as a frame. All four orientations come from one generated body, so
+   they can never drift apart. */
+
+[data-pane='conversation'] {
+  background-image:
+    url(assets/meridian-tick-tl.svg),
+    url(assets/meridian-tick-tr.svg),
+    url(assets/meridian-tick-bl.svg),
+    url(assets/meridian-tick-br.svg);
+  background-position: left 6px top 6px, right 6px top 6px, left 6px bottom 6px, right 6px bottom 6px;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+/* ---- details pane: the vertical chevalier portrait ---------------------- */
+/* The pane is narrow and full-height, so the portrait is authored 2:3 with the
+   head in the upper third; `cover` then crops it to whatever width the user's
+   panel is dragged to. */
+
+[data-pane='details'] {
+  background-image: url(assets/details-knight-light.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+[data-ds-dark-theme] [data-pane='details'] {
+  background-image: url(assets/details-knight-dark.jpg);
+}
+
+/* ---- composer: orbital divider rail + seal at the right edge ------------- */
+
+[data-dsh-surface='composer'] {
+  background-image:
+    url(assets/meridian-divider.svg),
+    url(assets/meridian-seal.svg);
+  background-position: 50% 2px, right 14px bottom 10px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: min(420px, 62%) 34px, 44px 44px;
+}
+
+[data-ds-dark-theme] [data-dsh-surface='composer'] {
+  background-image:
+    url(assets/meridian-divider-dark.svg),
+    url(assets/meridian-seal-dark.svg);
+}
+
+body[data-mw-art='suit'] [data-pane='details'] { background-image: url(assets/details-suit-light.jpg); }
+body[data-ds-dark-theme][data-mw-art='suit'] [data-pane='details'] { background-image: url(assets/details-suit-dark.jpg); }
+body[data-mw-art='swim'] [data-pane='details'] { background-image: url(assets/details-swim-light.jpg); }
+body[data-ds-dark-theme][data-mw-art='swim'] [data-pane='details'] { background-image: url(assets/details-swim-dark.jpg); }
+body[data-mw-art='chef'] [data-pane='details'] { background-image: url(assets/details-chef-light.jpg); }
+body[data-ds-dark-theme][data-mw-art='chef'] [data-pane='details'] { background-image: url(assets/details-chef-dark.jpg); }
+body[data-mw-art='doctor'] [data-pane='details'] { background-image: url(assets/details-doctor-light.jpg); }
+body[data-ds-dark-theme][data-mw-art='doctor'] [data-pane='details'] { background-image: url(assets/details-doctor-dark.jpg); }
+body[data-mw-art='clau'] [data-pane='details'] { background-image: url(assets/details-clau-light.jpg); }
+body[data-ds-dark-theme][data-mw-art='clau'] [data-pane='details'] { background-image: url(assets/details-clau-dark.jpg); }
+body[data-mw-art='gp'] [data-pane='details'] { background-image: url(assets/details-gp-light.jpg); }
+body[data-ds-dark-theme][data-mw-art='gp'] [data-pane='details'] { background-image: url(assets/details-gp-dark.jpg); }
+
+/* ---- wardrobe entry: static fallback -------------------------------------
+   Present whenever this skin is active, because a hand-dropped install cannot
+   execute anything. The hook stamps body[data-meridian-hooked] once its
+   interactive panel is live, and this yields to it. */
+[data-pane='sidebar']::after {
+  content: "换装 / 配色\A 默认：骑士 · 原色\A 5 套服装 · 3 档配色\A 可切换面板由皮肤中心载入";
+  position: fixed;
+  left: 12px;
+  bottom: 58px;
+  width: 226px;
+  z-index: 2147482000;
+  /* purely informational, so it must never steal clicks from the sidebar */
+  pointer-events: none;
+  white-space: pre;
+  padding: 9px 11px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 9px;
+  background: var(--dsw-alias-bg-layer-1);
+  color: var(--dsw-alias-label-secondary);
+  font-size: 11px;
+  line-height: 1.8;
+  letter-spacing: .02em;
+  box-shadow: var(--dsw-shadow-lv2, 0 4px 12px rgba(0, 0, 0, .18));
+}
+
+body[data-meridian-hooked] [data-pane='sidebar']::after {
+  display: none;
+}
+
+/* ---- wardrobe entry: interactive panel -----------------------------------
+   Markup comes from hooks.mjs, styling stays declarative here. The decoration
+   layers are pointer-events:none by contract, so interaction is re-enabled on
+   this subtree only. */
+[data-meridian-wardrobe] {
+  position: fixed;
+  left: 12px;
+  bottom: 58px;
+  width: 226px;
+  z-index: 2147483000;
+  pointer-events: auto;
+  padding: 9px 10px 10px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 10px;
+  background: var(--dsw-alias-bg-layer-1);
+  color: var(--dsw-alias-label-secondary);
+  font: 11px/1.7 -apple-system, "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  box-shadow: var(--dsw-shadow-lv2, 0 4px 12px rgba(0, 0, 0, .18));
+}
+
+[data-meridian-wardrobe] .mw-head {
+  color: var(--dsw-alias-label-caption);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+[data-meridian-wardrobe] .mw-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* the second row is the palette, kept visually apart from the outfits */
+[data-meridian-wardrobe] .mw-row + .mw-row {
+  margin-top: 5px;
+}
+
+[data-meridian-wardrobe] button {
+  font: inherit;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  background: transparent;
+  color: var(--dsw-alias-label-secondary);
+}
+
+[data-meridian-wardrobe] button:hover {
+  background: var(--dsw-specific-sidebar-nav-item-hover);
+  color: var(--dsw-alias-label-primary);
+}
+
+[data-meridian-wardrobe] button[aria-current='true'] {
+  border-color: var(--dsw-alias-brand-primary);
+  color: var(--dsw-alias-brand-primary);
+  cursor: default;
+}
+
+[data-meridian-wardrobe] .mw-note {
+  margin-top: 7px;
+  color: var(--dsw-alias-label-caption);
+}

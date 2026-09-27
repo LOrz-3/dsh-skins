@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.linxin666.org/dsh-skin/v2.json",
+  "skinManifestVersion": 2,
+  "id": "meridian",
+  "name": "子午线",
+  "nameEn": "DeepSeek-Meridian",
+  "version": "0.2.0",
+  "author": "LOrz-3",
+  "order": 120,
+  "accent": "#2b4bd8",
+  "license": "CC BY-NC-SA 4.0",
+  "tagline": "宝蓝描金骑士 · 内置衣柜",
+  "description": "宝蓝描金、白手套持玫瑰的骑士装插画皮肤，自带换装与换配色面板：5 套服装（骑士/西装/盛夏/甜点师/主治）与 3 档配色（原色/ClauMeridian 暖橙/GPMeridian 银灰），安装一次即可在侧栏左下切换，选择记忆在本机。",
+  "tags": [
+    "meridian",
+    "knight",
+    "wardrobe",
+    "outfit",
+    "palette",
+    "recolour",
+    "anime",
+    "art",
+    "translucent"
+  ],
+  "attribution": "DeepSeek-Meridian is an unofficial, non-commercial community character concept. All illustrations are original AI-generated artwork produced for this skin; the original reference image is not redistributed. Not affiliated with, endorsed by or sponsored by DeepSeek.",
+  "preview": {
+    "light": "preview/light.jpg",
+    "dark": "preview/dark.jpg"
+  },
+  "requires": {
+    "contracts": [
+      {
+        "apiVersion": "x-org.linxin666.skin-center/v1alpha1",
+        "kind": "SkinHooks",
+        "optional": true
+      }
+    ]
+  },
+  "facets": {
+    "client": {
+      "entry": "hooks.mjs",
+      "apiVersion": "x-org.linxin666.skin-center/v1alpha1"
+    }
+  },
+  "contributes": {
+    "stylesheet": "skin.css",
+    "patches": "patches.css",
+    "backgroundMedia": {
+      "light": {
+        "type": "image",
+        "src": "assets/background-knight-light.jpg",
+        "scrim": "linear-gradient(rgba(244, 246, 251, 0.16), rgba(244, 246, 251, 0.30))"
+      },
+      "dark": {
+        "type": "image",
+        "src": "assets/background-knight-dark.jpg",
+        "scrim": "linear-gradient(rgba(10, 18, 48, 0.28), rgba(10, 18, 48, 0.45))"
+      }
+    }
+  }
+}
