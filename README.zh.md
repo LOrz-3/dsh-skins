@@ -4,13 +4,34 @@
 
 ## 子午线 / DeepSeek-Meridian
 
-DeepSeek 男性形象皮肤，可切换不同风格服饰（骑士／西装／盛夏／甜点师／主治），可切换为 Claude 与 GPT 配色——安装一次即可。这个 fork 就是它的开发处。
+DeepSeek 男性形象皮肤，可切换不同风格服饰，可切换为 Claude 与 GPT 配色——安装一次即可。这个 fork 就是它的开发处。
 
+| ![Meridian 亮色](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/preview/light.jpg) | ![Meridian 暗色](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/preview/dark.jpg) |
+| --- | --- |
 | 亮色 | 暗色 |
-|---|---|
-| [![子午线 亮色](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/preview/light.jpg)](https://github.com/zhu1090093659/dsh-skins/pull/18) | [![子午线 暗色](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/preview/dark.jpg)](https://github.com/zhu1090093659/dsh-skins/pull/18) |
 
-对应 PR：[zhu1090093659/dsh-skins#18](https://github.com/zhu1090093659/dsh-skins/pull/18)
+## 服装 · 亮色
+
+| 骑士 | 西装 | 盛夏 | 甜点师 | 主治 |
+| --- | --- | --- | --- | --- |
+| ![骑士](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-knight-light.jpg) | ![西装](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-suit-light.jpg) | ![盛夏](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-swim-light.jpg) | ![甜点师](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-chef-light.jpg) | ![主治](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-doctor-light.jpg) |
+
+
+## 服装 · 暗色
+
+| 骑士 | 西装 | 盛夏 | 甜点师 | 主治 |
+| --- | --- | --- | --- | --- |
+| ![骑士](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-knight-dark.jpg) | ![西装](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-suit-dark.jpg) | ![盛夏](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-swim-dark.jpg) | ![甜点师](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-chef-dark.jpg) | ![主治](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-doctor-dark.jpg) |
+
+
+## 配色（亮色）
+
+| 原色 | ClauMeridian | GPMeridian |
+| --- | --- | --- |
+| ![原色](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-knight-light.jpg) | ![ClauMeridian](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-clau-light.jpg) | ![GPMeridian](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-gp-light.jpg) |
+
+
+对应 PR: [#18](https://github.com/zhu1090093659/dsh-skins/pull/18)
 
 ---
 

@@ -4,13 +4,34 @@ English | [中文](README.zh.md)
 
 ## 子午线 / DeepSeek-Meridian
 
-A DeepSeek male-character skin with switchable outfit styles (knight / suit / midsummer / patissier / physician) and switchable Claude / GPT palettes — all in one install. This fork is where it is being developed.
+A DeepSeek male-character skin with switchable outfit styles and switchable Claude / GPT palettes — all in one install. This fork is where it is being developed.
 
-| Light | Dark |
-|---|---|
-| [![子午线 light](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/preview/light.jpg)](https://github.com/zhu1090093659/dsh-skins/pull/18) | [![子午线 dark](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/preview/dark.jpg)](https://github.com/zhu1090093659/dsh-skins/pull/18) |
+| ![Meridian light](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/preview/light.jpg) | ![Meridian dark](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/preview/dark.jpg) |
+| --- | --- |
+| light | dark |
 
-Open pull request: [zhu1090093659/dsh-skins#18](https://github.com/zhu1090093659/dsh-skins/pull/18)
+## Outfits (light)
+
+| knight | suit | midsummer | patissier | physician |
+| --- | --- | --- | --- | --- |
+| ![knight](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-knight-light.jpg) | ![suit](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-suit-light.jpg) | ![midsummer](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-swim-light.jpg) | ![patissier](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-chef-light.jpg) | ![physician](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-doctor-light.jpg) |
+
+
+## Outfits (dark)
+
+| knight | suit | midsummer | patissier | physician |
+| --- | --- | --- | --- | --- |
+| ![knight](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-knight-dark.jpg) | ![suit](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-suit-dark.jpg) | ![midsummer](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-swim-dark.jpg) | ![patissier](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-chef-dark.jpg) | ![physician](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-doctor-dark.jpg) |
+
+
+## Palettes (light)
+
+| stock | ClauMeridian | GPMeridian |
+| --- | --- | --- |
+| ![stock](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-knight-light.jpg) | ![ClauMeridian](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-clau-light.jpg) | ![GPMeridian](https://github.com/LOrz-3/dsh-skins/raw/feat/skins-meridian/skins/meridian/assets/background-gp-light.jpg) |
+
+
+Open pull request: [#18](https://github.com/zhu1090093659/dsh-skins/pull/18)
 
 ---
 
